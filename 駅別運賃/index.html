@@ -14,20 +14,21 @@ window.onload = function() {
     var b = document.querySelector("input[name=\"b\"]").value;
 
     if (price <= 0) {
-      this.action = `${station_name}.html`;
+      this.action = `${station_name}.html#title`;
     } else if (b == "") {
-      this.action = `${station_name}/${price}.html`;
+      this.action = `${station_name}/${price}.html#title`;
     } else {
-      this.action = `${station_name}/${price}/${b}.html`;
+      this.action = `${station_name}/${price}/${b}.html#title`;
     }
   };
 };
 </script>
 </head>
 <body>
-<h1>駅別運賃</h1>
+<a href="/">TOP</a><br />
+<h1 id="title">駅別運賃</h1>
 
-<a href="list.html">対応駅一覧</a><br />
+<a href="list.html#title">対応駅一覧</a><br />
 
 <form id="submit" method="GET">
   <p>
